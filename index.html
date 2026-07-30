@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Дамир Кариев | Адаптер</title>
+    <style>
+        /* Базовый сброс и шрифты */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #000000;
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            /* Белая виньетка по бокам */
+            background-image: radial-gradient(
+                ellipse at 50% 50%,
+                transparent 60%,
+                rgba(255, 255, 255, 0.08) 100%
+            );
+            background-size: 100% 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        /* Дополнительный слой для усиления эффекта по краям */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+            background: radial-gradient(
+                ellipse at 50% 50%,
+                transparent 55%,
+                rgba(255, 255, 255, 0.12) 100%
+            );
+            z-index: 0;
+        }
+
+        /* Карточка-контейнер */
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+            padding: 20px 10px;
+        }
+
+        /* Аватарка */
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid rgba(255, 255, 255, 0.15);
+            margin-bottom: 20px;
+            box-shadow: 0 0 40px rgba(255, 255, 255, 0.05);
+            transition: transform 0.2s ease;
+        }
+        .avatar:hover {
+            transform: scale(1.02);
+        }
+
+        /* Имя */
+        .name {
+            font-size: 26px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+
+        /* Описание */
+        .bio {
+            font-size: 16px;
+            font-weight: 300;
+            opacity: 0.7;
+            margin-bottom: 32px;
+            line-height: 1.5;
+            padding: 0 10px;
+        }
+
+        /* Сетка для кнопок */
+        .links-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            margin-bottom: 20px;
+        }
+
+        /* Стиль кнопок */
+        .btn {
+            display: block;
+            padding: 16px 20px;
+            background-color: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 16px;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 500;
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            transition: all 0.25s ease;
+            letter-spacing: 0.3px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .btn:hover {
+            background-color: rgba(255, 255, 255, 0.14);
+            border-color: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(255, 255, 255, 0.05);
+        }
+
+        .btn:active {
+            transform: scale(0.97);
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Иконка Telegram внутри кнопки */
+        .btn .tg-icon {
+            display: inline-block;
+            margin-right: 10px;
+            font-size: 20px;
+            vertical-align: middle;
+        }
+
+        /* Маленький текст внизу */
+        .footer-note {
+            margin-top: 30px;
+            font-size: 14px;
+            opacity: 0.25;
+            letter-spacing: 0.5px;
+            font-weight: 300;
+            border-top: 1px solid rgba(255, 255, 255, 0.04);
+            padding-top: 20px;
+        }
+
+        /* Адаптив для телефонов */
+        @media (max-width: 480px) {
+            .avatar {
+                width: 100px;
+                height: 100px;
+            }
+            .name {
+                font-size: 22px;
+            }
+            .bio {
+                font-size: 15px;
+            }
+            .btn {
+                font-size: 16px;
+                padding: 14px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- ⚠️ ЗДЕСЬ ЗАМЕНИ ССЫЛКУ НА СВОЮ АВАТАРКУ -->
+        <img src="C:\Users\ASUS TUF GAMING\Documents\база данных\адаптер линки тгк и чаты муниципалка\адаптер\photo_2026-02-24_09-44-32.jpg" alt="Дамир Кариев" class="avatar">
+        
+        <!-- ⚠️ ЗДЕСЬ НАПИШИ СВОЕ ИМЯ -->
+        <h1 class="name">Дамир Кариев</h1>
+        
+        <!-- ⚠️ ЗДЕСЬ НАПИШИ СВОЕ ОПИСАНИЕ -->
+        <p class="bio">🚀 Мои каналы и чаты в Telegram</p>
+
+        <div class="links-grid">
+            <!-- КНОПКИ СО ВСЕМИ ТВОИМИ ССЫЛКАМИ -->
+            <a href="https://t.me/D0lg0prudny" class="btn" target="_blank">
+                <span class="tg-icon">📢</span> Долгопрудный
+            </a>
+            
+            <a href="https://t.me/sheremetyev0" class="btn" target="_blank">
+                <span class="tg-icon">✈️</span> Шереметьево
+            </a>
+            
+            <a href="https://t.me/Lo6nya" class="btn" target="_blank">
+                <span class="tg-icon">🏡</span> Лобня (основной)
+            </a>
+            
+            <a href="https://t.me/L06nya" class="btn" target="_blank">
+                <span class="tg-icon">🏡</span> Лобня (резерв)
+            </a>
+            
+            <a href="https://t.me/schools_Dolgoprudny" class="btn" target="_blank">
+                <span class="tg-icon">🏫</span> Школы Долгопрудного
+            </a>
+            
+            <a href="https://t.me/Khlebnikov0" class="btn" target="_blank">
+                <span class="tg-icon">🌳</span> Хлебниково
+            </a>
+        </div>
+
+        <div class="footer-note">
+            © 2026 · Все ссылки ведут в Telegram
+        </div>
+    </div>
+</body>
+</html>
